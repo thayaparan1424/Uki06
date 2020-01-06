@@ -22,7 +22,7 @@
   border-radius: 15px;
   background-color: grey;
   margin: 50px;
-  height: 350px;
+  height: 400px;
   width: 400px;
   float: left;
 }
@@ -32,7 +32,7 @@
   border-radius: 15px;
   background-color: grey;
   margin: 50px;
-  height: 350px;
+  height: 400px;
   width: 400px;
   float: right;
 }
@@ -61,7 +61,44 @@ footer{
   bottom:0;
 }
 
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("ul").hide();
+  });
+  $("#show").click(function(){
+    $("ul").show();
+  });
+
+  $("#tog").click(function(){
+    $("#p1").toggle();
+  });
+  $("h2").hover(function(){
+    $(this).css("background-color", "lightblue");
+  });
+});
+</script>
 </head>
 <body>
 
@@ -77,13 +114,18 @@ footer{
 
     <br>
     <br>
-    <center><img src="images.png" alt="Smiley face" ></center>
-      <div class="center1">
-        <h1> Welcome to Uki: Stepping Stone To Tech Life</h1>
+<center><img src="images.png" alt="Smiley face" ></center>
+    <div style="text-align:center;background-color:powderblue;" id=flip>Welcome to uki!</div>
+      <div style="text-align:center;background-color:powderblue;" id=panel>Hai Uki</div>
+
+<div class="center1">
+        <a href="" onMouseOver="alert('The Page Says You entered to Uki!');return true;">
+        <h1>Welcome to Uki:</a> Stepping Stone To Tech Life</h1>
         <p>Uki is a coding school by Yarl IT Hub, which offers six months-long
           intensive, in-class training program that trains students to acquire
           skills needed to join tech companies as interns/ junior developers or
           become entrepreneurs.</p>
+</div>
       </div>
 
 
@@ -98,12 +140,15 @@ footer{
           <li>English</li>
           <li>Personal Coaching</li>
         </ul>
+
+        <button id="hide">Hide</button>
+        <button id="show">Show</button>
       </div>
 
 
       <div class="center3">
         <h1>Coding Accelerator Program</h1>
-        <p>Learn to code in 6 months (Full time)<br>
+        <p id="p1" >Learn to code in 6 months (Full time)<br>
           Uki is a life-changing program with a proven track record of enabling those
           who had completed secondary school education to join the tech industry.
           The outcome-based learning experience at Uki is a meticulously designed program
@@ -111,13 +156,14 @@ footer{
           It ensures a transformational development of the technical skills, language
           skills, business skills and interpersonal skills of each student who completes
           the course.</p>
+          <button id="tog">Details </button>
         </div>
 
 
     </div>
         <div>
           <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          <br><br><br><br><br><br><br><br>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br>
 
           <footer>
             <center>
